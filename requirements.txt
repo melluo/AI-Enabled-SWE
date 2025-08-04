@@ -1,0 +1,41 @@
+# FastAPI for building the API
+fastapi==0.111.0     # The main web framework for building APIs
+
+# ASGI server for running FastAPI
+uvicorn[standard]==0.30.1    # ASGI server to run FastAPI apps in production/development
+
+# SQLAlchemy ORM for database models and sessions
+SQLAlchemy==2.0.30    # ORM library for database interactions
+
+# SQLite driver (already included with Python, but explicit for clarity)
+# No extra package needed for SQLite with SQLAlchemy
+
+# Pydantic for data validation and serialization
+pydantic==2.7.1       # Used by FastAPI for request/response validation
+
+# Pytest for running tests
+pytest==8.2.2         # Testing framework for writing and running tests
+
+# Optional: python-dotenv for loading environment variables (helpful in dev)
+python-dotenv==1.0.1  # Load environment variables from a .env file (optional, but recommended for config)
+
+# Optional: typing extensions for type hints (sometimes required by FastAPI/Pydantic)
+typing-extensions==4.11.0    # For improved type hinting support
+
+# Optional: HTTPX for async API testing (if planning to write API tests)
+httpx==0.27.0         # For testing FastAPI endpoints asynchronously
+```
+
+### Notes:
+
+- Comments are added after `#` for each package, which is supported by pip.
+- All versions are the latest stable as of June 2024.
+- If you don't use `python-dotenv` or `httpx`, you may remove those lines.
+- `sqlite3` is included in Python's standard library, so no extra package is needed for SQLite support with SQLAlchemy.
+
+---
+
+**Copy and save this file as `requirements.txt` in your project root.**  
+You can install all dependencies with:
+```bash
+pip install -r requirements.txt
